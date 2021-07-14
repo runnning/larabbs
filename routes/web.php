@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use \App\Http\Controllers\PagesController;
-
+use \App\Http\Controllers\UsersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,4 +17,6 @@ use \App\Http\Controllers\PagesController;
 Route::get('/',[PagesController::class,'root'])->name('root');
 
 Auth::routes(['verify'=>true]);
+
+Route::resource('users',UsersController::class,['only'=>['show','update','edit']]);
 
