@@ -19,4 +19,3 @@ Route::get('/',[PagesController::class,'root'])->name('root');
 Auth::routes(['verify'=>true]);
 
 Route::resource('users',UsersController::class,['only'=>['show','update','edit']]);
-
