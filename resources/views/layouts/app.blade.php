@@ -8,6 +8,7 @@
     <!--CSRF Token-->
     <meta name="csrf-token" content="{{csrf_token()}}">
     <title>@yield('title','laraBBS')-论坛</title>
+    <meta name="description" content="@yield('description','LaraBBS爱好者社区')">
     <!--Styles-->
     <link href="{{mix('css/app.css')}}" rel="stylesheet">
     @yield('styles')
