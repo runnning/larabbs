@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item {{active_class(if_route('topics.index'))}}"><a class="nav-link" href="{{route('topics.index')}}">话题</a></li>
+                <li class="nav-item {{active_class(if_route('topics.index')) }}"><a class="nav-link" href="{{route('topics.index')}}">话题</a></li>
                 <li class="nav-item"><a class="nav-link {{category_nav_active(1)}}" href="{{route('categories.show',1)}}">分享</a></li>
                 <li class="nav-item"><a class="nav-link {{category_nav_active(2)}}" href="{{route('categories.show',2)}}">教程</a></li>
                 <li class="nav-item"><a class="nav-link {{category_nav_active(3)}}" href="{{route('categories.show',3)}}">问答</a></li>
@@ -23,6 +23,11 @@
                     <li class="nav-item"><a href="{{route('login')}}" class="nav-link">登入</a></li>
                     <li class="nav-item"><a href="{{route('register')}}" class="nav-link">注册</a></li>
                 @else
+                    <li class="nav-item">
+                        <a class="nav-link mt-1 mr-3 font-weight-bold" href="{{route('topics.create')}}">
+                            <i class="fa fa-plus"></i>
+                        </a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="{{Auth::user()->avatar}}" class="img-responsive img-circle" width="30px" height="30px">
