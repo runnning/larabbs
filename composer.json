@@ -16,7 +16,9 @@
         "mews/captcha": "~3.0",
         "mews/purifier": "~3.3",
         "overtrue/laravel-lang": "~4.0",
-        "summerblue/laravel-active": "8.*"
+        "overtrue/pinyin": "~4.0",
+        "summerblue/laravel-active": "8.*",
+        "ext-http": "*"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "~3.5",
