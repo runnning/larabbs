@@ -16557,3 +16557,12 @@ body {
   font-size: 28px;
   line-height: 38px;
 }
+
+/*回复列表*/
+.topic-replay a {
+  color: inherit;
+}
+.topic-replay .meta {
+  font-size: 0.9em;
+  color: #b3b3b3;
+}
