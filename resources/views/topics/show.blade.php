@@ -35,7 +35,7 @@
                         {{$topic->created_at->diffForHumans()}}
                         .
                         <i class="far fa-comment"></i>
-                        {{$topic->replay_count}}
+                        {{$topic->reply_count}}
                     </div>
 
                     <div class="topic-body mt-4 mb-4">
@@ -68,7 +68,7 @@
             {{--      用户回复列表      --}}
             <div class="card topic-replay mt-4">
                 <div class="card=body">
-                    @include('topics._replay_box',['topic'=>$topic])
+                    @includeWhen(Auth::check(),'topics._replay_box',['topic'=>$topic])
                     @include('topics._reply_list',['replies'=>$topic->replies()->with('user')->get()])
                 </div>
             </div>

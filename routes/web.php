@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\RepliesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,4 +31,4 @@ Route::post('upload_image',[TopicsController::class,'uploadImage'])->name('topic
 
 Route::get('topics/{topic}/{slug?}',[TopicsController::class,'show'])->name('topics.show');
 
-Route::resource('replies', 'RepliesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('replies', RepliesController::class, ['only' => [ 'store','destroy']]);
