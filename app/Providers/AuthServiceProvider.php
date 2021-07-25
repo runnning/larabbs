@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Reply;
 use App\Models\Topic;
 use App\Observers\ReplyObserver;
 use App\Observers\TopicObserver;
@@ -29,9 +30,9 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-        //注册模型事件
+        //注册模型事件 必须对应相应的模型
         Topic::observe(TopicObserver::class);
-        Topic::observe(ReplyObserver::class);
+        Reply::observe(ReplyObserver::class);
         //修改策略自动发现的逻辑
         Gate::guessPolicyNamesUsing(function ($modelClass){
             // 动态返回模型对应的策略名称，如：// 'App\Model\User' => 'App\Policies\UserPolicy',

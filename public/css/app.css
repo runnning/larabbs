@@ -16567,14 +16567,14 @@ body {
   color: #b3b3b3;
 }
 
-/*消息通知*/
-.notification-bade .badge {
+/* 消息通知 */
+.notification-badge .badge {
   font-size: 12px;
   margin-top: 14px;
 }
-.notification-bade .badge-secondary {
+.notification-badge .badge-secondary {
   background-color: #EBE8E8;
 }
-.notification-bade .badge-hint {
+.notification-badge .badge-hint {
   background-color: #d15b47 !important;
 }
