@@ -16566,3 +16566,15 @@ body {
   font-size: 0.9em;
   color: #b3b3b3;
 }
+
+/*消息通知*/
+.notification-bade .badge {
+  font-size: 12px;
+  margin-top: 14px;
+}
+.notification-bade .badge-secondary {
+  background-color: #EBE8E8;
+}
+.notification-bade .badge-hint {
+  background-color: #d15b47 !important;
+}
