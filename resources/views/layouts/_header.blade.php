@@ -39,6 +39,13 @@
                             {{Auth::user()->name}}
                         </a>
                         <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
+                            @can('manage_contents')
+                                <a class="dropdown-item" href="{{url(config('administrator.uri'))}}">
+                                    <i class="fas fa-tachometer-alt mr-2"></i>
+                                    后台管理
+                                </a>
+
+                            @endcan
                             <a href="{{route('users.show',Auth::id())}}" class="dropdown-item">
                                 <i class="far fa-user mr-2"></i>
                                 个人中心
