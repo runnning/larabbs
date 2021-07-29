@@ -46,6 +46,8 @@ class SeedRolesAndPermissionsData extends Migration
     {
         // 需清除缓存，否则会报错
         app(Spatie\Permission\PermissionRegistrar::class)->forgetCachedPermissions();
+
+        // 清空所有数据表数据
         $tableNames=config('permission.table_names');
 
         Model::unguard();

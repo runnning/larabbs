@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--CSRF Token-->
     <meta name="csrf-token" content="{{csrf_token()}}">
-    <title>@yield('title','laraBBS')-论坛</title>
-    <meta name="description" content="@yield('description','LaraBBS爱好者社区')">
+    <title>@yield('title','laraBBS')-{{setting('site_name','基于laravel8论坛')}}</title>
+    <meta name="description" content="@yield('description',setting('seo_description','基于laravel8论坛'))">
+    <meta name="keywords" content="@yield('keywords',setting('seo_keyword','基于laravel8论坛'))">
     <!--Styles-->
     <link href="{{mix('css/app.css')}}" rel="stylesheet">
     @yield('styles')
