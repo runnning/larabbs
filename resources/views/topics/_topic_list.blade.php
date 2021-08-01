@@ -15,7 +15,7 @@
                             {{$topic->title}}
                         </a>
                         <a class="float-right" href="{{$topic->link()}}">
-                            <span class="badge badge-secondary badge-pill">{{$topic->replay_count}}</span>
+                            <span class="badge badge-secondary badge-pill">{{$topic->reply_count}}</span>
                         </a>
                     </div>
 
